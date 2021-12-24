@@ -4,14 +4,10 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Northwind.Entity.Models
+namespace Northwind.Entity.Dto
 {
-    public partial class AlphabeticalListOfProduct
+    public class DtoAlphabeticalListOfProduct : DtoBase
     {
-        public AlphabeticalListOfProduct()
-        {
-        }
-
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public int? SupplierId { get; set; }

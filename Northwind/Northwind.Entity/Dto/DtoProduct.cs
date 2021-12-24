@@ -4,12 +4,13 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Northwind.Entity.Models
+namespace Northwind.Entity.Dto
 {
-    public partial class AlphabeticalListOfProduct
+    public partial class DtoProduct : DtoBase
     {
-        public AlphabeticalListOfProduct()
+        public DtoProduct()
         {
+            //OrderDetails = new HashSet<OrderDetail>();
         }
 
         public int ProductId { get; set; }
@@ -22,6 +23,9 @@ namespace Northwind.Entity.Models
         public short? UnitsOnOrder { get; set; }
         public short? ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
-        public string CategoryName { get; set; }
+
+        //public virtual DtoCategory Category { get; set; }
+        //public virtual Supplier Supplier { get; set; }
+        //public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
