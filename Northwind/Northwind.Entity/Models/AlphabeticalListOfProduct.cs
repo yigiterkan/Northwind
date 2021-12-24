@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Northwind.Entity.Models
 {
-    public partial class AlphabeticalListOfProduct
+    public partial class AlphabeticalListOfProduct : EntityBase
     {
         public AlphabeticalListOfProduct()
         {
