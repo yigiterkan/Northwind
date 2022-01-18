@@ -36,3 +36,10 @@ C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\obj\Debug\net5.
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\obj\Debug\net5.0\Northwind.Dal.dll
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\obj\Debug\net5.0\ref\Northwind.Dal.dll
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\obj\Debug\net5.0\Northwind.Dal.pdb
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\bin\Debug\net5.0\Northwind.Dal.deps.json
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\bin\Debug\net5.0\Northwind.Dal.dll
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\bin\Debug\net5.0\ref\Northwind.Dal.dll
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\bin\Debug\net5.0\Northwind.Dal.pdb
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\bin\Debug\net5.0\Northwind.Entity.dll
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\bin\Debug\net5.0\Northwind.Entity.pdb
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Dal\obj\Debug\net5.0\Northwind.Dal.csproj.CopyComplete

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using Northwind.Entity.IBase;
-
+using Microsoft.AspNetCore.Http;
 
 namespace Northwind.Bll.Base
 {
@@ -19,7 +19,7 @@ namespace Northwind.Bll.Base
         private readonly IUnitOfWork unitOfWork;
         private readonly IServiceProvider service;
         private readonly IGenericRepository<T> repository;
-        Mapper mapper;
+        
         #endregion
 
         public BllBase(IServiceProvider service)
@@ -27,14 +27,14 @@ namespace Northwind.Bll.Base
             unitOfWork = service.GetService<IUnitOfWork>();
             repository = unitOfWork.GetRepository<T>();
             this.service = service;
-            mapper= new Mapper((IConfigurationProvider)service);
+            
         }
         public IResponse<TDto> Add(TDto item, bool saveChanges = true)
         {
             try
             {
                 var resolvedResult = "";
-                var TResult = repository.Add(mapper.Map<T>(item));
+                var TResult = repository.Add(ObjectMapper.Mapper.Map<T>(item));
                 resolvedResult = String.Join(',', TResult.GetType().GetProperties().Select(x => $"- {x.Name}:{x.GetValue(TResult) ?? ""}-"));
                
                 if(saveChanges)
@@ -42,9 +42,9 @@ namespace Northwind.Bll.Base
 
                 return new Response<TDto>
                 {
-                    StatusCode = 100,
+                    StatusCode = StatusCodes.Status200OK,
                     Message="Success",
-                    Data=mapper.Map<T,TDto>(TResult)
+                    Data=ObjectMapper.Mapper.Map<T,TDto>(TResult)
                 };
             }
             catch(Exception ex)
@@ -73,7 +73,32 @@ namespace Northwind.Bll.Base
             throw new NotImplementedException();
         }
 
-        public bool DeleteById(int id)
+        public IResponse<bool> DeleteById(int id, bool saveChanges = true)
+        {
+            try
+            {
+                repository.Delete(id);
+                if (saveChanges) Save();
+
+                return new Response<bool>
+                {
+                    Message = "Success",
+                    StatusCode = StatusCodes.Status200OK,
+                    Data = true
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Response<bool>
+                {
+                    Message = $"Error:{ex.Message}",
+                    StatusCode = StatusCodes.Status500InternalServerError,
+                    Data = false
+                };
+            }
+        }
+
+        public IResponse<bool> DeleteById(int id)
         {
             throw new NotImplementedException();
         }
@@ -89,16 +114,16 @@ namespace Northwind.Bll.Base
             {
                 return new Response<TDto>
                 {
-                    StatusCode = 88,
+                    StatusCode = StatusCodes.Status200OK,
                     Message = "Success",
-                    Data = mapper.Map<T, TDto>(repository.Find(id))
+                    Data = ObjectMapper.Mapper.Map<T, TDto>(repository.Find(id))
                 };
             }
             catch(Exception ex)
             {
                 return new Response<TDto>
                 {
-                    StatusCode = 999,
+                    StatusCode = StatusCodes.Status500InternalServerError,
                     Message = $"Error:{ ex.Message}"
                 };
             }
@@ -106,12 +131,54 @@ namespace Northwind.Bll.Base
 
         public IResponse<List<TDto>> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<T> list = repository.GetAll();
+                var dtoList = list.Select(x => ObjectMapper.Mapper.Map<TDto>(x)).ToList();
+
+                var response = new Response<List<TDto>>
+                {
+                    Message = "Success",
+                    StatusCode = StatusCodes.Status200OK,
+                    Data = dtoList
+                };
+                return response;
+            }
+            catch (Exception ex)
+            {
+               return  new Response<List<TDto>>
+                {
+                    Message = $"Error :{ex.Message }",
+                    StatusCode = StatusCodes.Status200OK,
+                    Data = null
+                };
+            }
         }
 
         public IResponse<List<TDto>> GetAll(Expression<Func<T, bool>> expression)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<T> list = repository.GetAll(expression).ToList();
+                var dtoList = list.Select(x => ObjectMapper.Mapper.Map<TDto>(x)).ToList();
+
+                var response = new Response<List<TDto>>
+                {
+                    Message = "Success",
+                    StatusCode = StatusCodes.Status200OK,
+                    Data = dtoList
+                };
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<List<TDto>>
+                {
+                    Message = $"Error :{ex.Message }",
+                    StatusCode = StatusCodes.Status200OK,
+                    Data = null
+                };
+            }
         }
 
         public IQueryable<T> GetIQueryable()
