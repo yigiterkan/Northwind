@@ -13,11 +13,12 @@ namespace Northwind.Dal.Concrete.Entityframework.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        #region variables
+        #region Variables
         DbContext context;
         IDbContextTransaction transaction;
         bool _dispose;
         #endregion
+
         public UnitOfWork(DbContext context)
         {
             this.context = context;
@@ -45,6 +46,7 @@ namespace Northwind.Dal.Concrete.Entityframework.UnitOfWork
                     context.Dispose();
                 }
             }
+
             this._dispose = true;
         }
 
@@ -69,8 +71,7 @@ namespace Northwind.Dal.Concrete.Entityframework.UnitOfWork
             }
             catch (Exception)
             {
-
-                throw;
+                return false;
             }
         }
 
@@ -83,19 +84,22 @@ namespace Northwind.Dal.Concrete.Entityframework.UnitOfWork
                 {
                     if(context == null)
                     {
-                        throw new Exception("Context is null");
+                        throw new ArgumentException("Context is null");
                     }
+
                     int result = context.SaveChanges();
+
+                    //işlemleri onaylar
                     _transaction.Commit();
 
                     return result;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    //hata olduğunda işlemleri geri alır
+                    //hata olduğunda işleri geri alır
                     transaction.Rollback();
 
-                    throw new Exception("Error on SaveChanges",ex);
+                    throw new Exception("Error on save changes", ex);
                 }
             }
         }

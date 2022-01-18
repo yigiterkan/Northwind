@@ -6,12 +6,8 @@ using System.Collections.Generic;
 
 namespace Northwind.Entity.Models
 {
-    public partial class AlphabeticalListOfProduct : EntityBase
+    public partial class AlphabeticalListOfProduct :EntityBase
     {
-        public AlphabeticalListOfProduct()
-        {
-        }
-
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public int? SupplierId { get; set; }

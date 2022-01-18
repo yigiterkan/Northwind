@@ -13,33 +13,18 @@ D:\Egitim\Patika\Bupa Acıbadem\Northwind\Northwind.Interface\obj\Debug\net5.0\N
 D:\Egitim\Patika\Bupa Acıbadem\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.dll
 D:\Egitim\Patika\Bupa Acıbadem\Northwind\Northwind.Interface\obj\Debug\net5.0\ref\Northwind.Interface.dll
 D:\Egitim\Patika\Bupa Acıbadem\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.pdb
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Interface.deps.json
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Interface.dll
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\bin\Debug\net5.0\ref\Northwind.Interface.dll
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Interface.pdb
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Entity.dll
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Entity.pdb
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csprojAssemblyReference.cache
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.AssemblyInfoInputs.cache
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.AssemblyInfo.cs
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csproj.CoreCompileInputs.cache
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csproj.CopyComplete
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.dll
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\ref\Northwind.Interface.dll
-C:\Users\acer\Downloads\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.pdb
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csprojAssemblyReference.cache
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.AssemblyInfo.cs
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csproj.CoreCompileInputs.cache
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.dll
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\ref\Northwind.Interface.dll
+C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.pdb
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Interface.deps.json
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Interface.dll
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\bin\Debug\net5.0\ref\Northwind.Interface.dll
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Interface.pdb
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Entity.dll
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\bin\Debug\net5.0\Northwind.Entity.pdb
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csprojAssemblyReference.cache
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.AssemblyInfoInputs.cache
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.AssemblyInfo.cs
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csproj.CoreCompileInputs.cache
 C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.csproj.CopyComplete
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.dll
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\ref\Northwind.Interface.dll
-C:\Users\acer\Documents\GitHub\Northwind\Northwind\Northwind.Interface\obj\Debug\net5.0\Northwind.Interface.pdb

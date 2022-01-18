@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Northwind.Entity.Base;
 using Northwind.Entity.IBase;
@@ -12,29 +14,50 @@ namespace Northwind.WebApi.Base
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ApiBaseController<TInterface,T,TDto> : ControllerBase where TInterface : IGenericServise<T,TDto> where T:EntityBase where TDto:DtoBase
+    [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
+    public class ApiBaseController<TInterface, T, TDto> : ControllerBase where TInterface : IGenericServise<T, TDto> where T:EntityBase where TDto : DtoBase
     {
-        public readonly TInterface service;
+        private readonly TInterface service;
 
         public ApiBaseController(TInterface service)
         {
             this.service = service;
         }
 
-        [HttpGet]
-        public IResponse<TDto> Find (int id)
+        [HttpGet("Find")]
+        public IResponse<TDto> Find(int id)
         {
             try
             {
-                var entity= service.Find(id);
+                var entity=  service.Find(id);
+
                 return entity;
             }
             catch (Exception ex)
             {
                 return new Response<TDto>
                 {
-                    Message= $"Error:{ex.Message}",
+                    Message = $"Error:{ex.Message}",
                     StatusCode = StatusCodes.Status500InternalServerError,
+                    Data = null
+                };
+            }
+        }
+
+        [HttpGet("GetAll")]
+        public IResponse<List<TDto>> GetAll()
+        {
+            try
+            {
+                return service.GetAll();
+            }
+            catch (Exception ex)
+            {
+                return new Response<List<TDto>>
+                {
+                    Message = $"Error:{ex.Message}",
+                    StatusCode = StatusCodes.Status500InternalServerError,
+                    Data = null
                 };
             }
         }

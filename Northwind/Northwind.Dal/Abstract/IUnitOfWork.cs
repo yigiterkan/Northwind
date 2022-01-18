@@ -9,8 +9,7 @@ namespace Northwind.Dal.Abstract
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGenericRepository<T> GetRepository<T>() where T: EntityBase;
-
+        IGenericRepository<T> GetRepository<T>() where T : EntityBase;
         bool BeginTransaction();
         bool RollBackTransaction();
         int SaveChanges();

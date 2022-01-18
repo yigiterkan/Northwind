@@ -18,7 +18,9 @@ namespace Northwind.Dal.Concrete.Entityframework.Repository
 
         public IQueryable OrderReport(int orderId)
         {
-            return dbset.AsQueryable();
+            var t = dbset.Where(x => x.OrderId == 10262).SingleOrDefault();
+            var y = t.OrderDetails;
+            return null;
         }
     }
 }

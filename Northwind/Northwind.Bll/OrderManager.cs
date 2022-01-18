@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Northwind.Bll
 {
@@ -17,7 +18,7 @@ namespace Northwind.Bll
 
         public OrderManager(IServiceProvider service) : base(service)
         {
-
+            orderRepository = service.GetService<IOrderRepository>();
         }
 
         public IQueryable OrderReport(int orderId)

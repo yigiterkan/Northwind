@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Northwind.Bll
 {
-    public class CustomerManager : BllBase<Order, DtoOrder>, ICustomerService
+    public class CustomerManager : BllBase<Customer, DtoCustomer>, ICustomerService
     {
         public readonly ICustomerRepository customerRepository;
 
@@ -20,9 +20,9 @@ namespace Northwind.Bll
 
         }
 
-        public IQueryable CustomerReport(int orderId)
+        public IQueryable CustomerReport()
         {
-            return customerRepository.CustomerReport(orderId);
+            return customerRepository.CustomerReport();
         }
     }
 }
